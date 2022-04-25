@@ -8,8 +8,19 @@ terraform {
 }
 
 provider "google" {
-  project = var.project
-  region  = var.region
-  zone    = var.zone
+  project     = var.gcp_project
+  region      = var.gcp_region
+  zone        = var.gcp_zone
+  credentials = file(gcp_auth_file)
   # Configuration options
+}
+
+terraform {
+  cloud {
+    organization = "blackdevopss"
+
+    workspaces {
+      name = "prod-grade-gcp-network"
+    }
+  }
 }
