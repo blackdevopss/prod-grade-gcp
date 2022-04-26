@@ -2,6 +2,7 @@
 Technical DevOps recipes for a production-grade datacenter in Google Cloud.
 
 # Design Areas
+```
    - Network
        - Core principals
           - Evaluate your application needs
@@ -23,3 +24,4 @@ Technical DevOps recipes for a production-grade datacenter in Google Cloud.
    - Cost Optimization
    - Automation
    - Virtual Desktop Infrastructure
+```
