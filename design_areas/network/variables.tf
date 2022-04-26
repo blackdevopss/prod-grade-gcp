@@ -17,3 +17,15 @@ variable "gcp_project" {
 variable "gcp_zone" {
   type = string
 }
+
+variable "vpc_networks" {
+  type = map(object({
+    project_id                      = string
+    auto_create_subnetworks         = bool
+    mtu                             = number
+    delete_default_routes_on_create = bool
+    routing_mode                    = string
+    description                     = string
+
+  }))
+}
