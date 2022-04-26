@@ -8,7 +8,7 @@
 # Crash log files
 crash.log
 
-*.tfvars
+#*.tfvars
 *.json
 
 # Ignore any .tfvars files that are generated automatically for each Terraform run. Most
