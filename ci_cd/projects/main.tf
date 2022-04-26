@@ -23,15 +23,24 @@ resource "azuredevops_git_repository" "github" {
   }
 }
 
-resource "azuredevops_git_repository" "repo" {
-  for_each       = var.azuredevops_repos
-  project_id     = azuredevops_project.azdo[each.key].id
-  name           = each.key
-  default_branch = each.value.default_branch
 
-
+resource "azuredevops_git_repository" "develop" {
+  project_id = data.azuredevops_project.prod_grade_gcp.id
+  name       = "develop"
   initialization {
-    init_type = each.value.initialization.init_type
+    init_type = "Clean"
   }
 }
 
+
+data "azuredevops_project" "prod_grade_gcp" {
+  name = "prod-grade-gcp"
+
+  depends_on = [
+    azuredevops_project.azdo
+  ]
+}
+
+output "proj_id" {
+  value = data.azuredevops_project.prod_grade_gcp.id
+}
