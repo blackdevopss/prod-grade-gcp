@@ -3,9 +3,15 @@ Technical DevOps recipes for a Production Grade Datacenter in Google Cloud.
 
 # Design Areas
    - Network
+       - Topology
+       - IP Addressing
+       - Name Resolution (DNS)
+       - Security
+       - Routing
+       - Connectivity options
+       - Perfomance
    - Compute
-      - Virtual Machines
-      - Kubernetes
+   - Kubernetes
    - Storage
    - Identity
    - Perfomance
