@@ -48,3 +48,12 @@ variable "azurerm_spn_client_id" {
 variable "azurerm_spn_secret" {
   type = string
 }
+
+variable "azuredevops_repos" {
+  type = map(object({
+    default_branch = string
+    initialization = object({
+      init_type = string
+    })
+  }))
+}

@@ -23,3 +23,15 @@ resource "azuredevops_git_repository" "github" {
   }
 }
 
+resource "azuredevops_git_repository" "repo" {
+  for_each       = var.azuredevops_repos
+  project_id     = azuredevops_project.azdo[each.key].id
+  name           = each.key
+  default_branch = each.value.default_branch
+
+
+  initialization {
+    init_type = each.value.initialization.init_type
+  }
+}
+
