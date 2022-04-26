@@ -11,14 +11,6 @@ variable "azuredevops_environments" {
 
   default = {
 
-    "dev" = {
-      name = "Dev"
-    }
-    "stage" = {
-      name = "stage"
-    }
-    "prd" = {
-      name = "Prod"
-    }
+
   }
 }
