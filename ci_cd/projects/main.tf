@@ -5,6 +5,11 @@ resource "azuredevops_project" "azdo" {
   version_control    = each.value.version_control
   work_item_template = each.value.work_item_template
   description        = each.value.description
+
+  features = {
+    "testplans" = each.value.features.testplans
+    "artifacts" = each.value.features.artifacts
+  }
 }
 
 resource "azuredevops_git_repository" "github" {

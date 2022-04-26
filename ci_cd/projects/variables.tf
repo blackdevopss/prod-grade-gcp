@@ -16,6 +16,10 @@ variable "azuredevops_projects" {
     version_control    = string
     work_item_template = string
     description        = string
+    features = object({
+      testplans = string
+      artifacts = string
+    })
   }))
 }
 
