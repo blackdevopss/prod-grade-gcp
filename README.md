@@ -1,5 +1,5 @@
 # production-grade-gcp
-Technical DevOps recipes for a Production Grade Datacenter in Google Cloud.
+Technical DevOps recipes for a production-grade datacenter in Google Cloud.
 
 # Design Areas
    - Network
